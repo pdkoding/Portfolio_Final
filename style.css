@@ -1,0 +1,258 @@
+body {
+    background: url("awesome.jpg") no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+/*!*scroll effect css*!*/
+#scroll {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
+
+/*intro page css*/
+
+.intro {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("swback.jpg");
+    background-size: 100% 100%;
+    overflow: hidden;
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 12vh;
+    font-weight: 600;
+    letter-spacing: 1vh;
+    line-height: 15vh;
+    perspective: 40vh;
+    text-align: justify;
+}
+.intro_wars {
+    position: relative;
+    top: 99999vh;
+    transform-origin: 50% 100%;
+    animation: intro_wars 70s linear infinite;
+}
+.intro_wars > .title {
+    font-size: 90%;
+    text-align: center;
+}
+.intro_wars > .title h1 {
+    margin: 0 0 10%;
+    text-transform: uppercase;
+}
+@keyframes intro_wars {
+    0% {
+        top: 10vh;
+        transform: rotateX(20deg)  translateZ(0);
+    }
+    100% {
+        top: -1000vh;
+        transform: rotateX(25deg) translateZ(-350vh);
+    }
+}
+
+/*navbar css*/
+
+.navbar {
+    position: fixed;
+    right: 2vw;
+    top: 3vh;
+    z-index: 5;
+}
+.navbar a {
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-decoration:none;
+    color: #ffffff;
+    font-size: 3vh;
+    padding: 1vw;
+    text-transform: uppercase;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.navbar a:hover {
+    color: #666666;
+}
+
+/*page2 settings*/
+
+.containerUp {
+    position: relative;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100vw;
+}
+.containerDown {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.myPic {
+    background-image: url("mypic.png");
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 20vh;
+    width: 10vw;
+    vertical-align: middle;
+    opacity: 0.7;
+}
+.containerDown h2 {
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 2.5em;
+    overflow: hidden;
+    text-align: center;
+    flex: 1 100%;
+}
+.containerDown p {
+    overflow: hidden;
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    flex: 1 100%;
+}
+.iconLink {
+    height: 8vh;
+    width: 4vw;
+    margin: 0 2vw;
+}
+#introScrlDown{
+    height: 1px;
+}
+
+/*page3 css*/
+
+.page3 {
+    background-image: url("deathstar.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.list {
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-around;
+    flex-direction: row;
+}
+.project {
+    background: url('mayden.png') no-repeat center;
+    background-size: cover;
+    opacity: 0.6;
+    width: 30vw;
+    height: 40vh;
+    margin-top: 10vh;
+    overflow: hidden;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.project:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    opacity: 1;
+    width: 32vw;
+    visibility: visible;
+}
+.project a {
+    display: block;
+    float: left;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.project a p {
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 2em;
+    color: #feda4a;
+    text-decoration: none;
+    visibility: hidden;
+}
+.project a p:hover {
+    visibility: visible;
+}
+
+@media screen and (max-width: 500px) {
+    .intro {
+        font-size: 5vh;
+        letter-spacing: 0.1vh;
+        line-height: 5vh;
+    }
+    .intro_wars {
+        animation: intro_wars 110s linear infinite;
+    }
+    .navbar {
+        position: fixed;
+        width: 100vw;
+        overflow: hidden;
+        list-style-type: none;
+    }
+    .navbar a {
+        height: 2em;
+        float: left;
+        padding: 0 0.4em;
+        margin: 0 2vw;
+        font: 1.5em 'Pathway Gothic One', sans-serif;
+        color: #ffffff;
+        text-transform: uppercase;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+    .navbar a:hover {
+        color: #666666;
+    }
+    .myPic {
+        height: 15vh;
+        width: 20vw;
+    }
+    .iconLink {
+        height: 10vh;
+        width: 15vw;
+        margin: 0 2vw;
+    }
+    .page3{
+        background-attachment: fixed;
+        overflow: auto;
+    }
+    .project {
+        width: 90vw;
+        height: 30vh;
+    }
+    .project a p {
+        font-size: 1em;
+        margin: 5vh auto;
+    }
+}
+
+@media screen and (max-width: 975px) {
+    .page3{
+        background-attachment: fixed;
+        overflow: auto;
+    }
+    .project {
+        width: 40vw;
+        height: 30vh;
+    }
+}
+
+
